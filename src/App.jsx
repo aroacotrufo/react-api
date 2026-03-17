@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [actors, setActors] = useState([])
+  const [actresses, setActresses] = useState([])
 
   useEffect(() => {
     const url = 'https://lanciweb.github.io/demo/api/actresses/'
@@ -12,7 +13,20 @@ function App() {
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        console.log('Dati Attori:', data) 
+        console.log('Dati Attrici', data)
+        setActresses(data)
+      })
+
+
+  }, [])
+
+  useEffect(() => {
+    const url = 'https://lanciweb.github.io/demo/api/actors/'
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log('Dati Attori:', data)
         setActors(data)
       })
 
