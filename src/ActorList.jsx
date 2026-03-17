@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function App() {
+function ActorList() {
     const [actors, setActors] = useState([])
 
     useEffect(() => {
