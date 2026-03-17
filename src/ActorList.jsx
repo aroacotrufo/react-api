@@ -21,14 +21,17 @@ function ActorList() {
             <h1 className='text-center display-4 mb-5'>Lista Attori</h1>
             <div className='row g-4'>
                 {actors.map(actors => (
-                    <div key={actors.id} className='col-lg-4 col-md-6'>
+                    <div key={actors.id}
+                        className='col-lg-4 col-md-6'
+                        onClick={() => onCard(actors)}>
+
                         <div className=' card h-100 shadow-sm'>
-                            <h5> {actor.name}</h5>
-                            <p>Nazionalità: {actor.nationality}</p>
-                            <p>Anno: {actor.birth_years}</p>
-                            <p>{actor.bio}</p>
-                            <p>Riconoscimenti: {actor.awards}</p>
-                            <img src={actor.image} />
+                            <h5> {actors.name}</h5>
+                            <p>Nazionalità: {actors.nationality}</p>
+                            <p>Anno: {actors.birth_years}</p>
+                            <p>{actors.bio}</p>
+                            <p>Riconoscimenti: {actors.awards}</p>
+                            <img src={actors.image} />
                         </div>
                     </div>
                 ))

@@ -18,18 +18,19 @@ function ActressList() {
     }, [])
 
     return (
-    <div className='mb-5'>
-            <h1 className='text-center display-4 mb-5'>Lista Attori</h1>
+        <div className='mb-5'>
+            <h1 className='text-center display-4 mb-5'>Lista Attrici</h1>
             <div className='row g-4'>
-                {actors.map(actress => (
-                    <div key={actress.id} className='col-lg-4 col-md-6'>
+                {actresses.map(actresses => (
+                    <div key={actresses.id} className='col-lg-4 col-md-6'
+                        onClick={() => onCard(actors)}>
                         <div className=' card h-100 shadow-sm'>
-                            <h5> {actress.name}</h5>
-                            <p>Nazionalità: {actress.nationality}</p>
-                            <p>Anno: {actress.birth_years}</p>
-                            <p>{actress.bio}</p>
-                            <p>Riconoscimenti: {actress.awards}</p>
-                            <img src={actress.image} />
+                            <h5> {actresses.name}</h5>
+                            <p>Nazionalità: {actresses.nationality}</p>
+                            <p>Anno: {actresses.birth_years}</p>
+                            <p>{actresses.bio}</p>
+                            <p>Riconoscimenti: {actresses.awards}</p>
+                            <img src={actresses.image} />
                         </div>
                     </div>
                 ))
