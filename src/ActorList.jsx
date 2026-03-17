@@ -20,3 +20,5 @@ function App() {
         <h1>Lista Attori</h1>
     )
 }
+
+export default ActorList

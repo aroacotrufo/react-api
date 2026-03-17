@@ -21,3 +21,4 @@ function ActressList() {
         <h1>Lista Attrici</h1>
     )
 }
+export default ActressList
