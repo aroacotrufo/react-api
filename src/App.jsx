@@ -1,42 +1,15 @@
-import { useState, useEffect } from 'react'
-
-
+import Actor from './ActorList'
+import Actress from './ActressList'
 
 
 function App() {
-  const [actors, setActors] = useState([])
-  const [actresses, setActresses] = useState([])
 
-  useEffect(() => {
-    const url = 'https://lanciweb.github.io/demo/api/actresses/'
-
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        console.log('Dati Attrici', data)
-        setActresses(data)
-      })
-
-
-  }, [])
-
-  useEffect(() => {
-    const url = 'https://lanciweb.github.io/demo/api/actors/'
-
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        console.log('Dati Attori:', data)
-        setActors(data)
-      })
-
-
-  }, [])
 
   return (
-    <>
-      <h1> Lsta Attori</h1>
-    </>
+    <div className="container">
+      <Actor></Actor>
+      <Actress></Actress>
+    </div>
   )
 }
 
